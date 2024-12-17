@@ -1,0 +1,57 @@
+   /* Container for the scrolling bar */
+    .scrolling-bar {
+      width: 100%;
+      overflow: hidden; /* Hide overflowing images */
+      white-space: nowrap; /* Prevent images from wrapping to a new line */
+      background-color: #0a0a23; /* Optional background color */
+      padding: 20px 0;
+    }
+  
+    /* Scrolling images container */
+    .scrolling-images {
+      display: flex;
+      align-items: center; /* Ensure images are vertically aligned */
+      gap: 110px; /* Add gap between images */
+      animation: scroll 25s linear infinite; /* Animation for smooth scrolling */
+    }
+  
+    /* Individual images */
+    .scrolling-images img {
+      height: 100px; /* Set consistent height for all images */
+      object-fit: contain; /* Ensure images are proportionally resized */
+      display: block;
+      transition: transform 0.3s ease; /* Optional hover effect */
+    }
+  
+    /* Hover effect for images */
+    .scrolling-images img:hover {
+      transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+  
+    /* Animation for scrolling */
+    @keyframes scroll {
+      from {
+        transform: translateX(0); /* Start at the beginning */
+      }
+      to {
+        transform: translateX(-100%); /* Move to the left by the width of all images */
+      }
+    }
+  
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .scrolling-images img {
+        height: 80px; /* Reduce image height for smaller screens */
+        
+      }
+  
+      .scrolling-bar {
+        padding: 10px 0; /* Adjust padding for smaller screens */
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .scrolling-images img {
+        height: 60px; /* Further reduce image height for very small screens */
+      }
+    }

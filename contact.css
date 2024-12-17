@@ -1,0 +1,185 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #0a0a23;
+    color: #333;
+  }
+  
+  /* Wrapper */
+  .unique-contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 3rem;
+    background: linear-gradient(135deg,#0a0a23,#1c2447);
+    min-height: 60vh;
+  }
+  
+  /* Left Section */
+  .unique-left-section {
+    flex: 1;
+    max-width: 45%;
+    animation: uniqueFadeIn 1.5s ease-in-out;
+  }
+  
+  .unique-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .unique-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .unique-social-icons {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .unique-social-logo {
+    width: 60px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .unique-social-logo:hover {
+    transform: scale(1.3);
+    filter: brightness(1.5);
+  }
+  
+  /* Right Section */
+  .unique-right-section {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    animation: uniqueSlideInRight 1.5s ease-in-out;
+  }
+  
+  .unique-contact-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #161632;
+    color: #333;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .unique-contact-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .unique-whatsapp-box {
+    border-left: 6px solid #0078d4;
+  }
+  
+  .unique-email-box {
+    border-left: 6px solid #0078d4;
+  }
+  
+  .unique-box-logo {
+    width: 60px;
+    margin-right: 1rem;
+  }
+  
+  .unique-box-text {
+    flex: 1;
+    font-size: 1.4rem;
+  }
+  
+  .unique-action-button {
+    text-decoration: none;
+    background: #007bff;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .unique-action-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .unique-left-section {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .unique-right-section {
+      max-width: 100%;
+    }
+  
+    .unique-social-icons {
+      justify-content: center;
+    }
+  
+    .unique-action-button {
+      padding: 0.6rem 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .unique-contact-wrapper {
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+  
+    .unique-contact-box {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .unique-box-logo {
+      margin: 0 auto 1rem;
+    }
+  
+    .unique-box-text {
+      margin-bottom: 1rem;
+    }
+  
+    .unique-social-icons {
+      gap: 1rem;
+    }
+  }
+  
+  /* Animations */
+  @keyframes uniqueFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes uniqueSlideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
